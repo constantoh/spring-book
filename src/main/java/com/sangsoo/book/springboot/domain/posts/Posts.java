@@ -7,6 +7,21 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * Getter -> getter메소드 생성(lombok)
+ *  -Setter를 작성하지 않음 -> setStatus (X), update(O)
+ * NoArgsConstructor -> 기본 생성자 생성(lombok)
+ *
+ * Entity ->실제 DB table과 매칭될 클래스, Entity클래스(javax)
+ *          -> Posts table생성됨.
+ *
+ * Id -> key(javax)
+ * Column(javax)
+ *
+ * Builder -> Builder패턴(lombok)
+ *
+ * extends BaseTimeEntity ->
+ * */
 @Getter
 @NoArgsConstructor
 @Entity

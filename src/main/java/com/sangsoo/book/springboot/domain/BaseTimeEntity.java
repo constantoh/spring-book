@@ -9,6 +9,11 @@ import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
 
+/**
+ * MappedSuperClass -> 이 클래스를 상속받는 클래스에 이 클래스의 필드들도 컬럼으로 함
+ *
+ * EntityListeners -> 이 클래스에 Auditing 기능 등록
+ * */
 @Getter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)

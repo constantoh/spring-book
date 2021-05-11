@@ -7,6 +7,13 @@ import com.sangsoo.book.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @RequestBody -> request가 객체형태로 넘어온다.
+ *
+ * @PathVariable -> url에 {}가 param으로 받아진다.
+ *
+ *
+ * */
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {

@@ -14,6 +14,13 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * @Transactional(readOnly) -> 트랜잭션, readOnly = true면 성능상 좋다.(조회만 할때)
+ *
+ * update메소드에 findbyId만하고 posts.update로 객체에 값만 업데이트해줄뿐, query가 없다.
+ *  -> jpa영속성. 변경된 객체값으로 데이터를 변경한다. -> 더티체킹
+ * */
+
 @RequiredArgsConstructor
 @Service
 public class PostsService {
