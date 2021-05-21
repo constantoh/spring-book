@@ -11,9 +11,8 @@ com/sangsoo/book/springboot/config/auth/dto/SessionUser.java
 com/sangsoo/book/springboot/domain/posts/Posts.java
  com.sangsoo.book.springboot.domain.posts.Posts
  com.sangsoo.book.springboot.domain.posts.Posts$PostsBuilder
-com/sangsoo/book/springboot/config/auth/dto/OAuthAttributes.java
- com.sangsoo.book.springboot.config.auth.dto.OAuthAttributes
- com.sangsoo.book.springboot.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
+com/sangsoo/book/springboot/config/auth/SecurityConfig.java
+ com.sangsoo.book.springboot.config.auth.SecurityConfig
 com/sangsoo/book/springboot/web/dto/PostsListResponseDto.java
  com.sangsoo.book.springboot.web.dto.PostsListResponseDto
 com/sangsoo/book/springboot/config/WebConfig.java
@@ -41,13 +40,14 @@ com/sangsoo/book/springboot/config/JpaConfig.java
  com.sangsoo.book.springboot.config.JpaConfig
 com/sangsoo/book/springboot/domain/posts/PostsRepository.java
  com.sangsoo.book.springboot.domain.posts.PostsRepository
-com/sangsoo/book/springboot/config/auth/CustomOAuth2UserService.java
- com.sangsoo.book.springboot.config.auth.CustomOAuth2UserService
+com/sangsoo/book/springboot/Application.java
+ com.sangsoo.book.springboot.Application
 com/sangsoo/book/springboot/config/auth/LoginUserArgumentResolver.java
  com.sangsoo.book.springboot.config.auth.LoginUserArgumentResolver
 com/sangsoo/book/springboot/web/dto/PostsResponseDto.java
  com.sangsoo.book.springboot.web.dto.PostsResponseDto
-com/sangsoo/book/springboot/Application.java
- com.sangsoo.book.springboot.Application
-com/sangsoo/book/springboot/config/auth/SecurityConfig.java
- com.sangsoo.book.springboot.config.auth.SecurityConfig
+com/sangsoo/book/springboot/config/auth/dto/OAuthAttributes.java
+ com.sangsoo.book.springboot.config.auth.dto.OAuthAttributes
+ com.sangsoo.book.springboot.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
+com/sangsoo/book/springboot/config/auth/CustomOAuth2UserService.java
+ com.sangsoo.book.springboot.config.auth.CustomOAuth2UserService
