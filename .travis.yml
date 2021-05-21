@@ -22,7 +22,7 @@ before_deploy:
 deploy:
   - provider: s3
     access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRECT_KEY
+    secret_access_key: $AWS_SECRET_KEY
 
     bucket: freelec-springboot2-sangsoo-build
     region: ap-northeast-2
