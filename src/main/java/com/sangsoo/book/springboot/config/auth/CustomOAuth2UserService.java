@@ -16,10 +16,13 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
-
+/**
+ * 로그인 이후 가져온 사용자의 정보(email, name, picture등)을 기반으로 가입 및 정보수정, 세션 저장 등의 기능 지원
+ * */
 @RequiredArgsConstructor
 @Service
 public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequest, OAuth2User> {
+
     private final UserRepository userRepository;
     private final HttpSession httpSession;
 
@@ -30,11 +33,13 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuth2User oAuth2User = delegate.loadUser(userRequest);
 
         String registrationId           = userRequest.getClientRegistration().getRegistrationId();
-        String userNameAttributeName    = userRequest.getClientRegistration().getProviderDetails()
-                                            .getUserInfoEndpoint().getUserNameAttributeName();
+        String userNameAttributeName    = userRequest.getClientRegistration().getProviderDetails().getUserInfoEndpoint().getUserNameAttributeName();    // pk
 
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
+        /**
+        * Session용 user객체
+        * */
         User user = saveOrUpdate(attributes);
         httpSession.setAttribute("user", new SessionUser(user));
 
@@ -44,7 +49,9 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 attributes.getNameAttributeKey());
     }
 
-
+    /**
+     * User Update
+     * */
     private User saveOrUpdate(OAuthAttributes attributes) {
         User user = userRepository.findByEmail(attributes.getEmail())
                 .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))

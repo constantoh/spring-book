@@ -8,6 +8,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 
+/**
+ * HandlerMethodArgumentResolver는 WebMvcConfigurer의 addArgumentResolvers()를 통해 추가해야함.
+ * */
 @RequiredArgsConstructor
 @Configuration
 public class WebConfig implements WebMvcConfigurer {

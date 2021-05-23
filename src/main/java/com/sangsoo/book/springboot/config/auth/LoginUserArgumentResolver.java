@@ -11,6 +11,8 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 
 import javax.servlet.http.HttpSession;
 /**
+ * Component -> 스프링 bean으로 자동 등록(Component Scan)
+ *
  * HandlerMethodArgumentResolver 상속
  *  -> 조건에 맞는 경우 메소드가 있따면 지정한 값으로 해당 메소드의 파라미터로 넘길 수 있다.
  *   -> supportsParameter => resolveArgument
