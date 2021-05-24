@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to spring-book 👋</h1>
+<h1 align="center">Spring-book 👋</h1>
 <p>
 </p>
 
-## Show your support
+## 프로젝트
 
 Give a ⭐️ if this project helped you!
 
